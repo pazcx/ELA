@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>VENTAS POR INTERNET</title>
+</head>
+<body>
+<p><h1>PATINES "yusti"</h1></p>
+<p><h2>CENTRO COMERCIAL EL POBLADO</h2></p>
+<p><h4>cel 65465465465 </h4></p>
+<p><h1>****</h1></p>
+<table>
+<tr><td>
+<p><h3>PATINES MORFY</h3><p>
+</td>
+<td>
+<p><h6>$6.000.000</h6></p>
+</td>
+<td>
+<img src="patin11.jpg">
+</td></tr>
+<tr><td>
+<p><h3>PATINES PLUTON</h3></p>
+</td>
+<td>
+<p><h6>$4.500.000</h6></p>
+</td>
+<td><img src="monda.jpg">
+<td></tr>
+</table>
+</body>
+</html>

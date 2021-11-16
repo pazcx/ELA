@@ -1,0 +1,20 @@
+#info {
+	background: #87CEFA;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+#info .contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.ela {
+	margin: 20px;
+}
+.ela img {
+width: 135px;
+height: 135px;
+border-radius: 50%;
+border: 7px solid;
+}

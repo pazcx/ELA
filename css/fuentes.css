@@ -1,0 +1,7 @@
+@font-face{
+	font-family: 'fuente';
+	src: '../fuente/crystal.ttf';
+}
+#fuente-personalizada{
+	font-family: 'fuente';
+}

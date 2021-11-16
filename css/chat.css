@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'dominique';
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	image-rendering: {
+		max-width: 100%
+	}
+}
+.melo{
+	width: 90%;
+	background: #87CEFA;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.melo h1{
+	color: #87CEFA;
+	font-size: 34px;
+	font-weight: 200;
+	text-align: center;
+}

@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'bentho';
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	image-rendering: {
+		max-width: 100%
+	}
+}
+.melo{
+	width: 100%;
+	background: #87CEFA;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.melo h1{
+	color: #87CEFA;
+	font-size: 34px;
+	font-weight: 200;
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+.form_register{
+	width: 95%;
+	max-width: 500px;
+	margin: auto;
+	background: #00CED1;
+	border-radius: 7px;
+	font-size: 25px;
+}
+.form_titulo{
+	background: #87CEFA;
+	color: #fff;
+	padding: 15px;
+
+	text-align: center;
+	font-weight: 100;
+	border-radius: 7px;
+	font-size: 30px;
+}
+.contenedor-inputs{
+	padding: 10px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+input{
+	margin-bottom: 13px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 3px;
+	border:  1px solid darkgray;
+}
+.input-48{
+	width: 48%;
+}
+.input-100{
+	width: 100%
+}

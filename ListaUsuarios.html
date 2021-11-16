@@ -1,0 +1,58 @@
+<?php require_once('../Connections/conexion.php'); ?>
+<?php
+mysqli_select_db($conexion,$database_conexion);
+$query_Recordset1 = "SELECT * FROM productos";
+$Recordset1 = mysqli_query($conexion, $query_Recordset1) or die(mysql_error());
+$row_Recordset1 = mysqli_fetch_assoc($Recordset1);
+$totalRows_Recordset1 = mysqli_num_rows($Recordset1);
+?>
+<!doctype html>
+<html lang="es">
+<html class="">
+<head>
+	<link href="css/consejosp.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lista usuarios</title>
+</head>
+<body>
+<header>
+<div align="center">
+	<section class="title">
+<p><font face="bentho" size="9" color="white">Lista de productos</font></p>
+</section>
+</header>
+<section id = "seccion">
+<article>
+ </div>
+ <br>
+<div align="center">
+<table border="3" width="1000" bordercolor="#ADD8E6" style="font-size:12px" bgcolor="#FFFFFF"> <tr>
+ <td><p><font face="dominique" size="5"><center>Código</font></p></td>
+<td><p><font face="dominique" size="5"><center>Nombre</font></p></td>
+<td><p><font face="dominique" size="5"><center>Precio</font></p></td>
+<td><p><font face="dominique" size="5"><center>Costo</font></p></td>
+<td><p><font face="dominique" size="5"><center>Fecha de Vencimiento</font></p></td>
+ </tr>
+<?php do { ?>
+ <tr>
+ <td ><?php echo $row_Recordset1['codigo']; ?></td>
+ <td ><?php echo $row_Recordset1['nombre']; ?></td>
+ <td ><?php echo $row_Recordset1['precio']; ?></td>
+  <td ><?php echo $row_Recordset1['costo']; ?></td>
+   <td ><?php echo $row_Recordset1['fechavence']; ?></td>
+</tr>
+ <?php
+} while ($row_Recordset1 = mysqli_fetch_assoc($Recordset1)); ?>
+ </table>
+<hr/>
+<a href="menu.html"><img src="../imagenes/menu.PNG"></a>
+</div>
+<hr/>
+</article>
+</section>
+</body>
+</html>
+<?php
+mysqli_free_result($Recordset1);
+?>

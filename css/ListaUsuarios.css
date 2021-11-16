@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'dominique';
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+/*==========================================*/
+
+.title{
+	width: 100%;
+	background: #00ACEE;
+	height: 200px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title h1{
+	color: #fff;
+	font-size: 34px;
+	font-weight: 200;
+	text-align: center;
+}

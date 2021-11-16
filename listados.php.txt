@@ -1,0 +1,75 @@
+<?php require_once('../Connections/conexion.php'); ?>
+<?php
+session_start();
+if (isset($_SESSION['GRUPO'])) {
+$grupo = $_SESSION['GRUPO'];
+$query_Recordset1 = "SELECT * FROM usuarios WHERE grupo = '$grupo' ORDER BY nombre, apellido";
+} else {
+$query_Recordset1 = "SELECT * FROM usuarios ORDER BY nombre, apellido";
+}
+mysqli_select_db($conexion,$database_conexion);
+$Recordset1 = mysqli_query($conexion, $query_Recordset1) or die(mysql_error());
+$row_Recordset1 = mysqli_fetch_assoc($Recordset1);
+$totalRows_Recordset1 = mysqli_num_rows($Recordset1);
+?>
+<!doctype html>
+<html lang="es">
+<html class="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio</title>
+</head>
+<body bgcolor="##CE7D35">
+<header>
+<div align="center">
+<h3>LISTADO DE USUARIOS ELA</h3>
+</header>
+<section id = "seccion">
+<article>
+</div>
+<div align="center">
+<table border="3" width="1000" bordercolor="#06B7C6" style="font-size:12px" bgcolor="#fff"> <tr>
+<td><h3>REGISTRO</h3></td>
+<td><h3>USUARIO</h3></td>
+<td><h3>NOMBRE</h3></td>
+<td><h3>APELLIDO</h3></td>
+<td><h3>CORREO</h3></td>
+<td><h3>CLAVE</h3></td>
+<td><h3>EDAD</h3></td>
+<td><h3>CALIDAD</h3></td>
+<td><h3>GENERO</h3></td>
+<td><h3>GRUPO</h3></td>
+</tr>
+<?php do { ?>
+<tr>
+<td ><?php echo $row_Recordset1['autonume']; ?></td>
+<td ><?php echo $row_Recordset1['usuario']; ?></td>
+<td ><?php echo $row_Recordset1['nombre']; ?></td>
+<td ><?php echo $row_Recordset1['apellido']; ?></td>
+
+<td ><?php echo $row_Recordset1['correo']; ?></td>
+<td ><?php echo $row_Recordset1['clave']; ?></td>
+<td ><?php echo $row_Recordset1['edad']; ?></td>
+<td ><?php echo $row_Recordset1['calidad']; ?></td>
+<td ><?php echo $row_Recordset1['genero']; ?></td>
+<td ><?php echo $row_Recordset1['grupo']; ?></td>
+</tr>
+<?php
+} while ($row_Recordset1 = mysqli_fetch_assoc($Recordset1)); ?>
+</table>
+<hr/>
+<a href="../grupo8/admon.php" ><img src="../imagenes/menu.PNG"></a>
+</div>
+<hr/>
+</article>
+<form action="borruser.php" method="post" name="formal">
+<label>REGISTRO A BORRAR<input type="number" name="q" size="10" id="numb" /></label>
+<input type="submit" value="BORRAR REGISTRO" />
+</form>
+</section>
+</body>
+</html>
+<?php
+mysqli_free_result($Recordset1);
+?>
